@@ -15,7 +15,9 @@
 <header>
     <div class="container">
         <div class="logo">
-            <h1>BetTips<span>Pro</span></h1>
+            <a href="<?php echo esc_url(home_url('/')); ?>">
+                <h1>BetTips<span>Pro</span></h1>
+            </a>
         </div>
         <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-expanded="false">
         <div class="hamburger">
@@ -28,10 +30,8 @@
         <nav class="desktop-nav">
             <ul>
                 <li><a href="<?php echo home_url(); ?>"><?php _e('Home', 'bettingtips'); ?></a></li>
-                <li><a href="#"><?php _e("Today's Tips", 'bettingtips'); ?></a></li>
-                <li><a href="#" ><?php _e("Upcoming Matches", 'bettingtips'); ?></a></li>
-                <li><a href="#"><?php _e("Results", 'bettingtips'); ?></a></li>
-                <li><a href="#"><?php _e("About Us", 'bettingtips'); ?></a></li>
+                <li><a href="/upcoming-matches" ><?php _e("Upcoming Matches", 'bettingtips'); ?></a></li>
+                <li><a href="/about-us"><?php _e("About Us", 'bettingtips'); ?></a></li>
             </ul>
         </nav>
 
@@ -39,10 +39,8 @@
         <nav class="mobile-nav" id="mobileNavWrapper">
             <ul>
                 <li><a href="<?php echo home_url(); ?>"><?php _e('Home', 'bettingtips'); ?></a></li>
-                <li><a href="#"><?php _e("Today's Tips", 'bettingtips'); ?></a></li>
-                <li><a href="#"><?php _e("Upcoming Matches", 'bettingtips'); ?></a></li>
-                <li><a href="#"><?php _e("Results", 'bettingtips'); ?></a></li>
-                <li><a href="#"><?php _e("About Us", 'bettingtips'); ?></a></li>
+                <li><a href="/upcoming-matches"><?php _e("Upcoming Matches", 'bettingtips'); ?></a></li>
+                <li><a href="/about-us"><?php _e("About Us", 'bettingtips'); ?></a></li>
             </ul>
         </nav>
 

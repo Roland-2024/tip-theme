@@ -5,7 +5,6 @@ function bettingtips_enqueue_assets() {
     // Enqueue CSS files
     wp_enqueue_style('bettingtips-style', get_template_directory_uri() . '/assets/css/style.css', array(), $theme_version);
     wp_enqueue_style('bettingtips-responsive', get_template_directory_uri() . '/assets/css/responsive.css', array(), $theme_version);
-    wp_enqueue_style('bettingtips-match-template', get_template_directory_uri() . '/assets/css/match-template.css', array(), $theme_version);
     wp_enqueue_style('bettingtips-all-min', get_template_directory_uri() . '/assets/css/all.min.css', array(), $theme_version);
 
     // Enqueue JS
@@ -29,30 +28,64 @@ function bettingtips_theme_setup() {
     load_theme_textdomain('bettingtips', get_template_directory() . '/languages');
 }
 add_action('after_setup_theme', 'bettingtips_theme_setup');
-
-// Register 'match' Custom Post Type
-add_action('init', 'register_match_post_type');
-function register_match_post_type() {
-    register_post_type('match', [
-        'labels' => [
-            'name'               => __('Matches', 'bettingtips'),
-            'singular_name'      => __('Match', 'bettingtips'),
-            'add_new_item'       => __('Add New Match', 'bettingtips'),
-            'edit_item'          => __('Edit Match', 'bettingtips'),
-            'all_items'          => __('All Matches', 'bettingtips'),
-            'view_item'          => __('View Match', 'bettingtips'),
-            'search_items'       => __('Search Matches', 'bettingtips'),
-            'not_found'          => __('No matches found', 'bettingtips'),
-        ],
-        'public'             => true,
-        'has_archive'        => true,
-        'rewrite'            => ['slug' => 'matches'],
-        'menu_icon'          => 'dashicons-chart-bar',
-        'supports'           => ['title', 'editor', 'thumbnail', 'custom-fields'],
-        'taxonomies'         => ['category'], // Use WP categories as leagues
-        'show_in_rest'       => true, // For block editor compatibility
-    ]);
-}
-
 // Enable post thumbnails (featured image)
 add_theme_support('post-thumbnails');
+
+function register_match_post_type() {
+    $labels = array(
+        'name' => 'Matches',
+        'singular_name' => 'Match',
+        'menu_name' => 'Matches',
+        'name_admin_bar' => 'Match',
+        'add_new' => 'Add New',
+        'add_new_item' => 'Add New Match',
+        'new_item' => 'New Match',
+        'edit_item' => 'Edit Match',
+        'view_item' => 'View Match',
+        'all_items' => 'All Matches',
+        'search_items' => 'Search Matches',
+        'not_found' => 'No matches found.',
+        'not_found_in_trash' => 'No matches found in Trash.'
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'menu_icon' => 'dashicons-calendar-alt',
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'matches'),
+        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+        'taxonomies' => array('match_category'), // Our custom taxonomy
+        'show_in_rest' => true, // Enables block editor
+    );
+
+    register_post_type('match', $args);
+}
+add_action('init', 'register_match_post_type');
+
+function register_match_taxonomy() {
+    $labels = array(
+        'name'              => 'Match Categories',
+        'singular_name'     => 'Match Category',
+        'search_items'      => 'Search Categories',
+        'all_items'         => 'All Categories',
+        'edit_item'         => 'Edit Category',
+        'update_item'       => 'Update Category',
+        'add_new_item'      => 'Add New Category',
+        'menu_name'         => 'Categories',
+    );
+
+    $args = array(
+        'hierarchical'      => true, // Like default categories
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_in_rest'      => true,
+        'show_admin_column' => true,
+        'rewrite'           => array('slug' => 'match-category'),
+    );
+
+    register_taxonomy('match_category', array('match'), $args);
+}
+add_action('init', 'register_match_taxonomy');
+
+require get_template_directory() . '/acf-fields.php';

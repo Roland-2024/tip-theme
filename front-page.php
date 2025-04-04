@@ -34,11 +34,11 @@
                 <div class="stat-label"><?php _e('Success Rate', 'bettingtips'); ?></div>
             </div>
             <div class="stat-box">
-                <div class="stat-number">1500+</div>
+                <div class="stat-number">300+</div>
                 <div class="stat-label"><?php _e('Tips Per Month', 'bettingtips'); ?></div>
             </div>
             <div class="stat-box">
-                <div class="stat-number">50+</div>
+                <div class="stat-number">20+</div>
                 <div class="stat-label"><?php _e('Leagues Covered', 'bettingtips'); ?></div>
             </div>
             <div class="stat-box">
