@@ -1,0 +1,660 @@
+/* Additional styles for dropdown functionality and read more button */
+
+/* Collapsible Analysis Section */
+.analysis-preview {
+    margin-bottom: 10px;
+}
+
+.analysis-full {
+    display: none;
+    padding-top: 10px;
+    border-top: 1px dashed var(--light-gray);
+}
+
+.read-more-btn {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.read-more-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.view-full-match {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+/* Mobile Navigation Toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    } 
+    header .container {
+        position: relative;
+    }
+}
+
+/* Hamburger Icon */
+.hamburger {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin: 0px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0px;
+}
+
+.hamburger span:nth-child(2) {
+    top: 8px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 16px;
+}
+
+.hamburger.open span:nth-child(1) {
+    top: 8px;
+    transform: rotate(135deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.hamburger.open span:nth-child(3) {
+    top: 8px;
+    transform: rotate(-135deg);
+}
+/* Additional responsive styles for all pages */
+
+/* General responsive adjustments */
+@media (max-width: 1200px) {
+    .container {
+        width: 95%;
+    }
+    
+    .content-wrapper {
+        gap: 20px;
+    }
+}
+
+/* Tablet styles */
+@media (max-width: 992px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+    
+    .main-content {
+        width: 100%;
+    }
+    
+    .sidebar {
+        width: 100%;
+        margin-top: 30px;
+    }
+    
+    .match-card {
+        padding: 15px;
+    }
+    
+    .teams {
+        flex-direction: row;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-links, .footer-contact {
+        width: 100%;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    /* About page specific */
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .about-text {
+        width: 100%;
+    }
+    
+    .approach-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .team-members {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .success-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-info {
+        flex-direction: column;
+    }
+    
+    .contact-details, .contact-form {
+        width: 100%;
+    }
+    
+    /* Results page specific */
+    .results-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    header .container {
+        padding: 0 15px;
+    }
+    
+    .logo h1 {
+        font-size: 24px;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    .page-header h1 {
+        font-size: 28px;
+    }
+    
+    .match-card {
+        padding: 12px;
+    }
+    
+    .match-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .vs {
+        margin: 5px 0;
+    }
+    
+    .prediction, .prediction-preview {
+        padding: 12px;
+    }
+    
+    .bet-tip, .odds, .confidence {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .confidence-meter {
+        width: 100%;
+    }
+    
+    .date-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .date-tab {
+        flex: 1 0 calc(50% - 10px);
+        margin: 5px;
+        text-align: center;
+    }
+    
+    /* About page specific */
+    .approach-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-members {
+        grid-template-columns: 1fr;
+    }
+    
+    .success-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Results page specific */
+    .results-summary {
+        grid-template-columns: 1fr;
+    }
+    
+    .match-stats .stat-bars {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .match-stats .stat-bar {
+        width: 100% !important;
+        height: 30px;
+        border-radius: 4px;
+        margin-bottom: 5px;
+    }
+    
+    /* Upcoming matches page specific */
+    .match-details {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* Small mobile styles */
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .hero p {
+        font-size: 14px;
+    }
+    
+    .cta-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .league-section h2 {
+        font-size: 18px;
+    }
+    
+    .team-name {
+        font-size: 16px;
+    }
+    
+    .filter-form .form-group {
+        flex-direction: column;
+    }
+    
+    .filter-form label {
+        margin-bottom: 5px;
+    }
+    
+    .filter-form select, .filter-form input {
+        width: 100%;
+    }
+    
+    .testimonial {
+        padding: 15px;
+    }
+    
+    .faq-question h4 {
+        font-size: 16px;
+    }
+    
+    .footer-disclaimer p, .copyright p {
+        font-size: 12px;
+    }
+}
+
+/* Specific adjustments for match template page */
+@media (max-width: 992px) {
+    .teams-large {
+        padding: 20px;
+    }
+    
+    .team-logo {
+        font-size: 36px;
+    }
+    
+    .team-name-large {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .match-header-large h1 {
+        font-size: 24px;
+    }
+    
+    .match-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .teams-large {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .vs-large {
+        margin: 10px 0;
+    }
+    
+    .prediction-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .prediction-label {
+        width: auto;
+        margin-bottom: 5px;
+    }
+    
+    .confidence-meter-large {
+        width: 100%;
+    }
+}
+
+/* Dropdown menu animation */
+@keyframes slideDown {
+    from {
+        max-height: 0;
+        opacity: 0;
+    }
+    to {
+        max-height: 500px;
+        opacity: 1;
+    }
+}
+
+.analysis-full {
+    animation: slideDown 0.3s ease-in-out;
+}
+
+/* Hover effects for better interactivity */
+.match-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover, .btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+}
+
+.view-full-match:hover, .view-prediction-btn:hover, .view-analysis-btn:hover {
+    background-color: var(--dark-color);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+/* Improved form styling for mobile */
+@media (max-width: 768px) {
+    input, select, textarea {
+        font-size: 16px; /* Prevents zoom on focus in iOS */
+        padding: 12px;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+    
+    .newsletter input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .newsletter button {
+        width: 100%;
+    }
+}
+
+/* Print styles */
+@media print {
+    header, footer, .sidebar, .cta-btn, .newsletter, form, button {
+        display: none;
+    }
+    
+    body, .container, .content-wrapper, .main-content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .match-card, .about-section, .league-section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        margin-bottom: 20px;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .page-header {
+        margin-bottom: 20px;
+    }
+    
+    .page-header h1 {
+        font-size: 24px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --light-bg: #1a1a1a;
+        --white-color: #1a1a1a;
+        --dark-color: #f5f5f5;
+        --gray-color: #b0b0b0;
+        --light-gray: #333333;
+    }
+    
+    body {
+        background-color: #121212;
+        color: #f5f5f5;
+    }
+    
+    .match-card, .widget, .prediction-section, .analysis-section, .stats-section, 
+    .betting-odds, .related-matches, .match-sidebar .newsletter {
+        background-color: #1e1e1e;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    input, select, textarea {
+        background-color: #2a2a2a;
+        color: #f5f5f5;
+        border: 1px solid #444;
+    }
+    
+    input::placeholder, textarea::placeholder {
+        color: #888;
+    }
+    
+    .footer-disclaimer, .copyright {
+        background-color: #0a0a0a;
+    }
+}
+
+/* Accessibility improvements */
+:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.btn:focus, a:focus {
+    outline: 2px solid white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Additional helper classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+/* Improved loading state */
+.loading {
+    position: relative;
+    min-height: 200px;
+}
+
+.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Improved table responsiveness */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+}
+/* Desktop: show desktop nav, hide mobile nav toggle */
+@media (min-width: 769px) {
+  .desktop-nav { display: flex; }
+  .mobile-menu-toggle, .mobile-nav {
+    display: none !important;
+  }
+}
+
+/* Mobile: hide desktop nav, show mobile toggle */
+@media (max-width: 768px) {
+  .desktop-nav { display: none; }
+  .mobile-menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 9999;
+  }
+
+  .mobile-nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 9998; /* just under the toggle button */
+    background: var(--dark-color, #222);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .mobile-nav.show {
+    max-height: 500px;
+  }
+}
+/* Force mobile nav items to stack vertically */
+.mobile-nav ul {
+    display: flex;
+    flex-direction: column; /* Column direction stacks them */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .mobile-nav ul li {
+    width: 100%;           /* Each list item takes full width */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .mobile-nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    text-align: center;     /* Or left if you prefer */
+    color: #fff;
+    text-decoration: none;
+  }
+  

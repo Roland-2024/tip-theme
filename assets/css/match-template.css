@@ -1,0 +1,412 @@
+/* Styles for the match template page */
+
+.match-template {
+    padding: 40px 0;
+}
+
+.breadcrumbs {
+    margin-bottom: 20px;
+    color: var(--gray-color);
+    font-size: 14px;
+}
+
+.breadcrumbs a {
+    color: var(--primary-color);
+}
+
+.breadcrumbs .current-page {
+    font-weight: 600;
+}
+
+.match-header-large {
+    margin-bottom: 30px;
+}
+
+.match-header-large h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.match-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: var(--gray-color);
+}
+
+.match-meta span i {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+.teams-large {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-color);
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.team-large {
+    text-align: center;
+    flex: 1;
+}
+
+.team-logo {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.team-name-large {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.vs-large {
+    font-size: 28px;
+    font-weight: 700;
+    padding: 0 20px;
+    color: var(--secondary-color);
+}
+
+.match-content-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.match-main-content {
+    flex: 2;
+}
+
+.match-sidebar {
+    flex: 1;
+}
+
+.prediction-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.prediction-item {
+    display: flex;
+    align-items: center;
+}
+
+.prediction-label {
+    font-weight: 600;
+    width: 100px;
+}
+
+.prediction-value {
+    font-weight: 700;
+}
+
+.tip-value {
+    color: var(--primary-color);
+}
+
+.odds-value {
+    color: var(--secondary-color);
+}
+
+.confidence-meter-large {
+    width: 200px;
+    height: 10px;
+    background-color: var(--light-gray);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.confidence-meter-large .meter-fill {
+    height: 100%;
+    background-color: var(--success-color);
+}
+
+.confidence-meter-large.low .meter-fill {
+    width: 33%;
+}
+
+.confidence-meter-large.medium .meter-fill {
+    width: 66%;
+}
+
+.confidence-meter-large.high .meter-fill {
+    width: 85%;
+}
+
+.confidence-meter-large.very-high .meter-fill {
+    width: 100%;
+}
+
+.confidence-text {
+    font-size: 14px;
+    color: var(--gray-color);
+}
+
+.analysis-content {
+    color: var(--gray-color);
+    line-height: 1.7;
+}
+
+.analysis-content h3 {
+    color: var(--dark-color);
+    margin: 25px 0 15px;
+    font-size: 20px;
+}
+
+.analysis-content h3:first-child {
+    margin-top: 0;
+}
+
+.analysis-content p {
+    margin-bottom: 15px;
+}
+
+.results-list {
+    list-style: none;
+    margin: 15px 0;
+}
+
+.results-list li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.result-win, .result-loss, .result-draw {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 700;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.result-win {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.result-loss {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.result-draw {
+    background-color: var(--warning-color);
+    color: white;
+}
+
+.key-players {
+    display: flex;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.key-player {
+    flex: 1;
+}
+
+.key-player h4 {
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.key-player ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.key-player ul li {
+    margin-bottom: 5px;
+}
+
+.stats-comparison {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stat-row {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stat-bars {
+    display: flex;
+    height: 30px;
+    gap: 2px;
+}
+
+.stat-bar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.stat-bar.home {
+    background-color: var(--primary-color);
+    border-radius: 4px 0 0 4px;
+}
+
+.stat-bar.away {
+    background-color: var(--secondary-color);
+    border-radius: 0 4px 4px 0;
+}
+
+.betting-odds, .related-matches, .match-sidebar .newsletter {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.odds-table {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.odds-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.odds-row:last-child {
+    border-bottom: none;
+}
+
+.odds-type {
+    font-weight: 600;
+}
+
+.odds-value {
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.odds-disclaimer {
+    font-size: 12px;
+    color: var(--gray-color);
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.related-matches ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.related-matches ul li {
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 15px;
+}
+
+.related-matches ul li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.related-match {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.related-teams {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.related-league, .related-time {
+    font-size: 12px;
+    color: var(--gray-color);
+}
+
+/* Responsive styles for match template */
+@media (max-width: 992px) {
+    .match-content-wrapper {
+        flex-direction: column;
+    }
+    
+    .match-sidebar {
+        order: -1;
+    }
+    
+    .key-players {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .teams-large {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .vs-large {
+        margin: 10px 0;
+    }
+    
+    .match-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .prediction-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .prediction-label {
+        width: auto;
+    }
+    
+    .confidence-meter-large {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .match-header-large h1 {
+        font-size: 24px;
+    }
+    
+    .team-logo {
+        font-size: 36px;
+    }
+    
+    .team-name-large {
+        font-size: 20px;
+    }
+    
+    .prediction-section, .analysis-section, .stats-section, .betting-odds, .related-matches, .match-sidebar .newsletter {
+        padding: 15px;
+    }
+    
+    .analysis-content h3 {
+        font-size: 18px;
+    }
+}
